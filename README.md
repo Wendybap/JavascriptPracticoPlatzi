@@ -217,20 +217,40 @@ if (tipoDeSuscripcion === "Free") {
 R:
 
 ```js
-if (tipoDeSuscripcion === "Free") {
-  console.log("Solo puedes tomar los cursos gratis");
+const suscripciones = {
+  free: "Solo puedes tomar los cursos gratis",
+  basic: "Puedes tomar casi todos los cursos de Platzi durante un mes",
+  expert: "Puedes tomar casi todos los cursos de Platzi durante un año",
+  expertplus:
+    "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año",
+};
+
+function getTipoDeSuscripcion(suscripciones) {
+  if (suscripciones === "free") {
+    console.log("Solo puedes tomar los cursos gratis");
+    return;
+  }
+
+  if (suscripciones === "basic") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    return;
+  }
+
+  if (suscripciones === "expert") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    return;
+  }
+
+  if (suscripciones === "expertplus") {
+    console.log(
+      "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+    );
+    return;
+  }
+  console.log("esto no existe");
 }
-if (tipoDeSuscripcion === "Basic") {
-  console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
-}
-if (tipoDeSuscripcion === "Expert") {
-  console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
-}
-if (tipoDeSuscripcion === "ExpertPlus") {
-  console.log(
-    "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
-  );
-}
+
+getTipoDeSuscripcion("free");
 ```
 
 ### 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays u objetos y un solo condicional. 😏

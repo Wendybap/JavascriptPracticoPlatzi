@@ -27,7 +27,7 @@ const buttonsNumSimb = [
   { value: "0", type: "numero" },
   { value: ".", type: "numero" },
 ];
-console.log(buttonsNumSimb);
+
 const resultado = document.getElementById("resultado");
 
 function getButtonsNumSimb() {
@@ -74,7 +74,6 @@ function buttonClick(evento) {
     case "borrar":
       borrar();
       break;
-
     default:
       break;
   }
